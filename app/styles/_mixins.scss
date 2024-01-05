@@ -1,0 +1,3 @@
+@mixin transition($string) {
+    transition: $string 0.35s cubic-bezier(.17,.67,.83,.67)
+}
