@@ -9,8 +9,18 @@
      background-color: $main-clr;
      color: $body-bg-clr;
    }
+
+   @media screen and (max-width: 460px) {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(5),
+    &:nth-child(6) {
+        display: none;
+    }
+   }
 }
 
 .page-header {
     background-color: $body-bg-clr;
 }
+
