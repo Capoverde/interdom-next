@@ -8,7 +8,6 @@ export default function Home() {
 
   const toggleMenu = () => {
     setMenuOpen((prevMenuOpen) => !prevMenuOpen);
-    console.log('~~~~~~~~click w hamburger~~~~~~~~~~');
   };
 
   return (

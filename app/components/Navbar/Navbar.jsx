@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion as m } from "framer-motion";
 
 const navLinks = [
   { title: "O nas", href: "/" },
   { title: "Oferta", href: "/" },
   { title: "e-kartoteka", href: "/" },
-  { title: "Contact", href: "/" },
+  { title: "Contact", href: "/ContactPage/Contact.jsx" },
 ];
 
 const Navbar = ({ toggleMenu, isOpen }) => {
@@ -28,7 +28,7 @@ const Navbar = ({ toggleMenu, isOpen }) => {
 
   const mobileLinkVars = {
     initial: {
-      y: "30vh",
+      y: "10vh",
       transition: {
         duration: 0.5,
         ease: [0.37, 0, 0.63, 1],
@@ -43,48 +43,27 @@ const Navbar = ({ toggleMenu, isOpen }) => {
     },
   };
 
-  const MobileNavLink = ({ title, href }) => {
+  const NavLinks = ({ title, href }) => {
+  
     return (
-      <motion.div variants={mobileLinkVars} className="text-5xl uppercase text-gray-200">
-        <Link href={href}>{title}</Link>
-      </motion.div>
+      <m.div variants={mobileLinkVars} className="text-5xl mt-8 uppercase text-gray-200">
+        <Link href={href} onClick={() => {toggleMenu();}}>{title}</Link>
+      </m.div>
     );
   };
 
   return (
-    <header>
-      <nav className="flex justify-between items-center py-8 lg:py-4 px-2 ">
-        <div
-          className="cursor-pointer lg:hidden text-md text-gray-200"
-          onClick={() => {
-            toggleMenu();
-          }}
-        >
-          Menu
-        </div>
-      </nav>
       <AnimatePresence>
         {isOpen && (
-          <motion.div
+          <m.nav
             variants={containerVars}
             initial="initial"
             animate="open"
             exit="initial"
-            className="fixed left-0 top-0 w-full h-screen origin-top bg-slate-950 text-gray-200 p-10"
+            className="fixed left-0 top-[9%] w-full h-screen origin-top bg-slate-950 text-gray-200 p-10"
           >
             <div className="flex h-full flex-col">
-              <div className="flex justify-between">
-                <h1 className="text-lg text-black">Portfolio</h1>
-                <p
-                  className="cursor-pointer text-md text-gray-200"
-                  onClick={() => {
-                    toggleMenu();
-                  }}
-                >
-                  Close
-                </p>
-              </div>
-              <motion.div
+              <m.div
                 variants={containerVars}
                 initial="initial"
                 animate="open"
@@ -93,16 +72,16 @@ const Navbar = ({ toggleMenu, isOpen }) => {
               >
                 {navLinks.map((link, index) => (
                   <div className="overflow-hidden" key={index}>
-                    <MobileNavLink title={link.title} href={link.href} />
+                    <NavLinks title={link.title} href={link.href} />
                   </div>
                 ))}
-              </motion.div>
+              </m.div>
             </div>
-          </motion.div>
+          </m.nav>
         )}
       </AnimatePresence>
-    </header>
   );
 };
 
 export default Navbar;
+
