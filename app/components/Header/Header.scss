@@ -24,3 +24,14 @@
     background-color: $body-bg-clr;
 }
 
+.menu-open {
+    background-color: $main-clr;
+    border: none;
+    .header-box:not(:nth-child(1)) {
+        display: none;
+    }
+}
+
+.hamburger-box.menu-open {
+    color: $body-bg-clr;
+}
