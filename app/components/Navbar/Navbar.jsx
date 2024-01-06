@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { AnimatePresence, motion as m } from "framer-motion";
+import './Navbar.scss'
 
 const navLinks = [
   { title: "Home", href: "/" },
@@ -64,7 +65,7 @@ const Navbar = ({ toggleMenu, isOpen }) => {
             initial="initial"
             animate="open"
             exit="initial"
-            className={`fixed left-0 w-full h-screen origin-top bg-slate-950 text-gray-200`}
+            className={`page-nav fixed left-0 w-full h-screen origin-top bg-slate-950 text-gray-200`}
           >
             <div className="flex h-full flex-col">
               <m.div
