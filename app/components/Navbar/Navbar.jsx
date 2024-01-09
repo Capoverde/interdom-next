@@ -10,7 +10,7 @@ const navLinks = [
   { title: "Contact", href: "/ContactPage/Contact.jsx" },
 ];
 
-const Navbar = ({ toggleMenu, isOpen }) => {
+export const Navbar = ({ toggleMenu, isOpen }) => {
   const containerVars = {
     initial: {
       y:"-100%",
@@ -87,6 +87,4 @@ const Navbar = ({ toggleMenu, isOpen }) => {
       </AnimatePresence>
   );
 };
-
-export default Navbar;
 

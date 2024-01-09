@@ -1,9 +1,10 @@
 "use client"
-import Navbar from "./components/Navbar/Navbar";
+import { Navbar } from "./components/Navbar/Navbar";
 import { Header } from "./components/Header/Header";
 import { useState } from "react";
-import HomePage from "./Home/HomePage";
-import ScoreBanner from './components/ScoreBanner/ScoreBanner'
+import { HomePage } from "./pages/Home/HomePage";
+import { ScoreBanner } from './components/ScoreBanner/ScoreBanner'
+import { About } from './pages/About/AboutPage'
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,6 +19,7 @@ export default function Home() {
       <Navbar isOpen={menuOpen} toggleMenu={toggleMenu} />
       <HomePage />
       <ScoreBanner />
+      <About />
     </>
   );
 }

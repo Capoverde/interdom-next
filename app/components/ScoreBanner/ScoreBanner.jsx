@@ -5,7 +5,7 @@ import { motion as m, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import './ScoreBanner.scss'
 
-const CounterPage = () => {
+export const ScoreBanner = () => {
     const [counterState, setCounterState] = useState(false);
     const controls = useAnimation();
     const [ref, inView] = useInView({
@@ -33,7 +33,7 @@ const CounterPage = () => {
     }, [controls, inView]);
 
     return (
-        <div ref={ref} className="w-full px-40  text-gray-300 border-b border-[#3e3e3e] bg-slate-950         overflow-hidden">
+        <div ref={ref} className="w-full px-40 mt-10 text-gray-300 border-b border-[#3e3e3e] bg-slate-950   overflow-hidden">
             <div className="
                             counter-box
                             md:flex md:justify-between
@@ -73,6 +73,3 @@ const CounterPage = () => {
         </div>
     );
 }
-
-export default CounterPage;
-
