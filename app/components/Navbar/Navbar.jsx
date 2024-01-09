@@ -15,7 +15,8 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
     initial: {
       y:"-100%",
       transition: {
-        duration: 0.4,
+        duration: 0.5,
+        delay: 1.5,
         staggerChildren: 0.09,
         staggerDirection: -1,
       },
@@ -65,7 +66,7 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
             initial="initial"
             animate="open"
             exit="initial"
-            className={`page-nav fixed left-0 w-full h-screen origin-top bg-slate-950 text-gray-200`}
+            className={`page-nav fixed left-0 w-full h-screen origin-top bg-slate-950 text-gray-200 z-[50]`}
           >
             <div className="flex h-full flex-col">
               <m.div
@@ -73,7 +74,7 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
                 initial="initial"
                 animate="open"
                 exit="initial"
-                className="flex flex-col h-full  items-center gap-10 md:mb-12"
+                className="flex flex-col h-full  items-center gap-10 md:mb-12 xl:mb-12"
               >
                 {navLinks.map((link, index) => (
                   <div className="overflow-hidden" key={index}>
