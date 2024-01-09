@@ -17,7 +17,7 @@ export const Header = ({ toggleMenu }) => {
   }
 
   return (
-    <header className={`page-header w-full flex justify-between xl:h-[10vh] font-bold fixed border-b grid-border-clr ${isOpen ? 'menu-open' : ''}`}>
+    <header className={`page-header w-full flex justify-between xl:h-[10vh] font-bold fixed border-b grid-border-clr z-[50] ${isOpen ? 'menu-open' : ''}`}>
       <div className={`header-box hamburger-box flex items-center justify-center h-full w-[5%] border-r grid-border-clr ${isOpen ? 'menu-open' : ''}`}>
         <Hamburger
           className="z-[100]"
