@@ -5,6 +5,9 @@ import { useState } from "react";
 import { HomePage } from "./pages/Home/HomePage";
 import { ScoreBanner } from './components/ScoreBanner/ScoreBanner'
 import { About } from './pages/About/AboutPage'
+import { Offer } from './pages/Offer/Offer'
+import { ContactPage } from "./pages/ContactPage/ContactPage";
+import { Footer } from './components/Footer/Footer'
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -20,6 +23,9 @@ export default function Home() {
       <HomePage />
       <ScoreBanner />
       <About />
+      <Offer />
+      <ContactPage />
+      <Footer />
     </>
   );
 }

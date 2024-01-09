@@ -1,9 +1,10 @@
 "use client"
 import React, { useEffect, useRef } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion as m, AnimatePresence } from 'framer-motion';
 import {  BsArrowUpRight } from "react-icons/bs";
-import styles from './HomePage.scss'
+import  './HomePage.scss'
 
 export const HomePage = () => {
 
@@ -84,7 +85,7 @@ export const HomePage = () => {
              </m.div>  
           </Link>
       </div>
-      <m.div className={`${styles.heroImageBox} row w-full h-1/2 bg-gray-300`}
+      <m.div className={`heroImageBox heroImageBox-1 row w-full h-1/2 bg-gray-300 relative`}
        variants={{
          hidden: { 
           clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
@@ -96,11 +97,23 @@ export const HomePage = () => {
        initial="hidden"
        animate="visible"
        transition={{duration: 0.5, delay: 0.45}}
-      ></m.div>                
+      >
+        <h2 className="title text-left text-6xl p-6 absolute bottom-0 text-gray-200">
+         Zarządzanie <br />
+         Najmem
+        </h2>
+        <Image 
+         src={"/HomeImage1.jpeg"}
+         width={900}
+         height={700}
+         responsive={true}
+         style={{objectFit: "contain"}}
+        />        
+      </m.div>                
     </div>
     <div className="col h-full grow">
       <div className="h-1/4 w-full"></div>
-      <m.div className={`${styles.heroImageBox} bg-gray-300 h-3/4 w-[90%] mx-auto my-auto`}
+      <m.div className={`heroImageBox heroImageBox-2 bg-gray-300 h-3/4 w-[90%] mx-auto my-auto`}
        variants={{
         hidden: { 
          clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
@@ -113,11 +126,22 @@ export const HomePage = () => {
       animate="visible"
       transition={{duration: 0.8, delay: 1}}  
       >
+        <h2 className="title text-left text-7xl py-2 px-6 absolute bottom-0 text-gray-200">
+         Wspólnoty <br />
+         Mieszkaniowe
+        </h2>    
+        <Image 
+         src={"/HomeImage2.jpeg"}
+         width={900}
+         height={700}
+         responsive={true}
+         style={{objectFit: "contain"}}
+        />            
       </m.div>
     </div>
     <div className="col h-full w-[25.1%] border-l border-r mr-[5%] grid-border-clr">
       <div className="w-full h-[15%]"></div>
-      <m.div className={`${styles.heroImageBox} w-full h-[85%] bg-gray-300`}
+      <m.div className={`heroImageBox heroImageBox-3 w-full h-[85%] bg-gray-300`}
        variants={{
         hidden: { 
          clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
@@ -129,7 +153,19 @@ export const HomePage = () => {
       initial="hidden"
       animate="visible"
       transition={{duration: 1.2, delay: 1.4}} 
-      ></m.div>
+      >
+        <h2 className="title text-left text-7xl py-2 px-6 absolute bottom-0 text-gray-200 ">
+         Prywatni <br />
+         Właściciele
+        </h2>
+        <Image 
+         src={"/HomeImage3.jpg"}
+         width={900}
+         height={700}
+         responsive={true}
+         style={{objectFit: "contain"}}
+        />
+      </m.div>
     </div>
   </div>
   </AnimatePresence>
