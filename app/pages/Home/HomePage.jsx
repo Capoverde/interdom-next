@@ -81,7 +81,7 @@ export const HomePage = () => {
                               animate="visible"
                               transition={{duration: 1, delay: 1.5}}              
              >
-              <BsArrowUpRight className=' text-xl rotate-[45deg]'/>
+               <BsArrowUpRight className=' text-2xl rotate-[45deg] pt-1'/>
              </m.div>  
           </Link>
       </div>
@@ -104,8 +104,6 @@ export const HomePage = () => {
         </h2>
         <Image 
          src={"/HomeImage1.jpeg"}
-        //  width={900}
-        //  height={700}
          responsive={true}
          style={{objectFit: "cover"}}
          layout="fill"

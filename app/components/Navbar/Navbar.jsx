@@ -16,7 +16,7 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
       y:"-100%",
       transition: {
         duration: 0.5,
-        delay: 1.5,
+        delay: 1,
         staggerChildren: 0.09,
         staggerDirection: -1,
       },
@@ -32,7 +32,7 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
     },
   };
 
-  const mobileLinkVars = {
+  const centerLinkVars = {
     initial: {
       y: "10vh",
       transition: {
@@ -52,7 +52,7 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
   const NavLinks = ({ title, href }) => {
   
     return (
-      <m.div variants={mobileLinkVars} className={`navLink text-5xl mt-8 uppercase text-gray-200 `}>
+      <m.div variants={centerLinkVars} className={`navLink text-5xl mt-8 uppercase text-gray-200 `}>
         <Link href={href} onClick={() => {toggleMenu();}}>{title}</Link>
       </m.div>
     );
@@ -66,9 +66,12 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
             initial="initial"
             animate="open"
             exit="initial"
-            className={`page-nav fixed left-0 w-full h-screen origin-top bg-slate-950 text-gray-200 z-[50]`}
+            className={`page-nav flex fixed left-0 w-full h-screen origin-top 
+                        border-t border-[#3e3e3e]
+                      bg-slate-950 text-gray-200 z-[50]`}
           >
-            <div className="flex h-full flex-col">
+            {/* ----------------- CENTER ------------------ */}
+            <div className="h-full flex-col border-r border-[#3e3e3e] px-8">
               <m.div
                 variants={containerVars}
                 initial="initial"
