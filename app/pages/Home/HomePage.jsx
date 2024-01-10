@@ -85,7 +85,7 @@ export const HomePage = () => {
              </m.div>  
           </Link>
       </div>
-      <m.div className={`heroImageBox heroImageBox-1 row w-full h-1/2 bg-gray-300 relative`}
+      <m.div className={`heroImageBox heroImageBox-1 row w-full h-1/2 bg-gray-300 relative overflow-hidden`}
        variants={{
          hidden: { 
           clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
@@ -113,8 +113,8 @@ export const HomePage = () => {
     </div>
     <div className="col h-full grow">
       <div className="h-1/4 w-full"></div>
-      <m.div className={`heroImageBox heroImageBox-2 bg-gray-300 h-3/4 w-[90%] mx-auto my-auto`}
-       variants={{
+      <m.div className={`heroImageBox heroImageBox-2 bg-gray-300 h-3/4 w-[90%] mx-auto my-auto overflow-hidden`}
+       variants={{ 
         hidden: { 
          clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
        },
@@ -132,16 +132,20 @@ export const HomePage = () => {
         </h2>    
         <Image 
          src={"/HomeImage2.jpeg"}
-         width={900}
-         height={700}
+         width={100}
+         height={100}
          responsive={true}
-         style={{objectFit: "contain"}}
+        // width={0}
+        // height={0}
+        // sizes="100vw"
+        // style={{ objectFit: "contain", width: '100%', height: '100%' }} <--- to gówno robi szerokość
+        // layout="fill"
         />            
       </m.div>
     </div>
     <div className="col h-full w-[25.1%] border-l border-r mr-[5%] grid-border-clr">
       <div className="w-full h-[15%]"></div>
-      <m.div className={`heroImageBox heroImageBox-3 w-full h-[85%] bg-gray-300`}
+      <m.div className={`heroImageBox heroImageBox-3 w-full h-[85%] bg-gray-300 overflow-hidden`}
        variants={{
         hidden: { 
          clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
@@ -163,7 +167,9 @@ export const HomePage = () => {
          width={900}
          height={700}
          responsive={true}
-         style={{objectFit: "contain"}}
+        //  style={{objectFit: "cover"}}
+        // layout="fill"
+
         />
       </m.div>
     </div>
