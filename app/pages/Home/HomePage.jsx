@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion as m, AnimatePresence } from 'framer-motion';
-import {  BsArrowUpRight } from "react-icons/bs";
+import { BsArrowUpRight } from "react-icons/bs";
 import  './HomePage.scss'
 
 export const HomePage = () => {
@@ -98,16 +98,17 @@ export const HomePage = () => {
        animate="visible"
        transition={{duration: 0.5, delay: 0.45}}
       >
-        <h2 className="title text-left text-6xl p-6 absolute bottom-0 text-gray-200">
+        <h2 className="title text-left text-6xl p-6 absolute bottom-0 text-gray-200 z-[30]">
          Zarządzanie <br />
          Najmem
         </h2>
         <Image 
          src={"/HomeImage1.jpeg"}
-         width={900}
-         height={700}
+        //  width={900}
+        //  height={700}
          responsive={true}
-         style={{objectFit: "contain"}}
+         style={{objectFit: "cover"}}
+         layout="fill"
         />        
       </m.div>                
     </div>
@@ -126,20 +127,15 @@ export const HomePage = () => {
       animate="visible"
       transition={{duration: 0.8, delay: 1}}  
       >
-        <h2 className="title text-left text-7xl py-2 px-6 absolute bottom-0 text-gray-200">
+        <h2 className="title text-left text-7xl py-2 px-6 absolute bottom-0 text-gray-200 z-[30]">
          Wspólnoty <br />
          Mieszkaniowe
         </h2>    
         <Image 
          src={"/HomeImage2.jpeg"}
-         width={100}
-         height={100}
          responsive={true}
-        // width={0}
-        // height={0}
-        // sizes="100vw"
-        // style={{ objectFit: "contain", width: '100%', height: '100%' }} <--- to gówno robi szerokość
-        // layout="fill"
+         style={{objectFit: "cover"}}
+         layout="fill"
         />            
       </m.div>
     </div>
@@ -158,17 +154,15 @@ export const HomePage = () => {
       animate="visible"
       transition={{duration: 1.2, delay: 1.4}} 
       >
-        <h2 className="title text-left text-7xl py-2 px-6 absolute bottom-0 text-gray-200 ">
+        <h2 className="title text-left text-7xl py-2 px-6 absolute bottom-0 text-gray-200 z-[10]">
          Prywatni <br />
          Właściciele
         </h2>
         <Image 
          src={"/HomeImage3.jpg"}
-         width={900}
-         height={700}
          responsive={true}
-        //  style={{objectFit: "cover"}}
-        // layout="fill"
+         style={{objectFit: "cover"}}
+        layout="fill"
 
         />
       </m.div>
