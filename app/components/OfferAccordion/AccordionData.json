@@ -2,21 +2,25 @@
     {
         "id":"1", 
         "title": "Wspólnoty Mieszkaniowe",
+        "title2": "Wspólnoty Mieszkaniowe",
         "describe": "W pierwszym etapie, czyli etapie przygotowawczym, zajmujemy się przejęciem dokumentów i informacji związanych z budynkiem. Przeprowadzamy szczegółową analizę stanu technicznego i prawnego nieruchomości, uzyskujemy numery NIP i REGON, a także zawieramy umowy z dostawcami mediów i ubezpieczeniowymi. \n\n W drugim etapie, nasza praca skupia się na bieżącym utrzymaniu terenów wspólnoty mieszkaniowej, przeglądach technicznych, reprezentowaniu wspólnoty przed urzędami i sądami, windykacji należności oraz organizacji zebrań.\n\n W trzecim etapie podejmujemy długofalowe działania, opracowując strategię zwiększania wartości nieruchomości, organizując prace remontowe i konserwacyjne, pozyskując dodatkowe źródła finansowania, takie jak dzierżawa powierzchni reklamowych. Naszym celem jest skuteczne zarządzanie i rozwijanie nieruchomości w sposób zrównoważony i długofalowy."
     },
     {
         "id":"2",
         "title": "Neruchomości Prywatne",
+        "title2": "Neruchomości Prywatne",
         "describe": "W pierwszym etapie, czyli przygotowawczym, zajmujemy się kompleksowym przejęciem dokumentów i informacji związanych z budynkiem. Sprawdzamy prawidłowość funkcjonowania instalacji, infrastruktury oraz badamy stan prawny i faktyczny nieruchomości. Ponadto, w imieniu właściciela zawieramy umowy z dostawcami mediów, ubezpieczycielami i innymi, a także organizujemy prowadzenie księgowości.\n\n W etapie bieżącej pracy (etap II), skupiamy się na utrzymaniu nieruchomości, przeprowadzając negocjacje stawek wynagrodzenia firm, zapewniając przeglądy techniczne zgodne z wymogami prawa budowlanego, usuwając awarie i prowadząc księgowość.\n\n Reprezentujemy właścicieli przed organami administracji państwowej i sądami, zajmujemy się zarządzaniem najmem oraz obsługą prawną nieruchomości.\n\n W trzecim etapie, podejmujemy długofalowe działania, obejmujące ułożenie planu konserwacyjnego, zorganizowanie prac konserwacyjnych, usuwanie awarii, pozyskiwanie dodatkowych źródeł dochodu i inne działania mające na celu długofalowy rozwój nieruchomości. Nasza kompleksowa oferta obejmuje szeroki zakres działań, zapewniając właścicielom spokój i efektywne zarządzanie ich inwestycją."
     },
     {
         "id":"3", 
         "title": "Zarządzanie Najmem",
+        "title2": "Zarządzanie Najmem",
         "describe": "Jako zarządca lokalu/nieruchomości przygotowujemy lokal/nieruchomość do wynajęcia, weryfikujemy klientów i doprowadzamy do szybkiego zawarcia umowy. Następnie od dnia jego zasiedlenia rozpoczynamy współpracę z lokatorem (w przeciwieństwie do pośrednika w obrocie nieruchomościami, który ją kończy).\n\n Na bieżąco kontrolujemy terminowość dokonywania wpłat, stan lokalu oraz rozwiązujemy wszelkie problemy pojawiające się podczas trwania najmu. Najemca zostanie przez nas wstępnie sprawdzony pod względem wiarygodności (np. stałe zatrudnienie, wysokość wynagrodzenia, zawód), tak aby zminimalizować ryzyko niewypłacalności.\n\n Zawrzemy w Państwa imieniu umowę najmu według sprawdzonych w praktyce wzorów, należycie zabezpieczających Państwa interes jako strony wynajmującej. Zlecenie naszej firmie obsługi najmu lokalu mieszkalnego umożliwia ponadto zachowanie anonimowości właściciela lokalu w stosunku do najemcy lokalu. "
     },
     {
         "id":"4", 
         "title": "Doradztwo",
+        "title2": "Doradztwo",
         "describe": "Polegające na kontroli zgodności funkcjonowania nieruchomości z przepisami prawa, wszczynanie akcji prawnych lub innych określonych procedur dla ściągnięcia zaległych czynszów i innych należności związanych z nieruchomością, jak również dla ewentualnego usunięcia z nieruchomości najemców nie wywiązujących się ze swoich obowiązków, podejmowanie akcji nie rutynowych (innych niż ściąganie czynszów). \n\n Np. sprawy spadkowe, wyodrębnianie własności lokali itp., postępowanie wieczysto-księgowe, uzyskiwanie zezwoleń, ulg i odliczeń, pomoc w organizacji wspólnot mieszkaniowych, koordynację planowanych i prowadzonych inwestycji oraz inne nie wymienione wyżej działania…. "
     }
 ]

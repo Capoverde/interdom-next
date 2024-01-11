@@ -40,11 +40,24 @@ export const OfferAccordion = () => {
           onMouseLeave={handleMouseLeave}
         >
           <div className='content relative w-full h-full'>
-            <h3 className='offerTitle text-[4rem] text-gray-200 p-8'>
+            <h3 className='offerTitle  xl:text-[3rem] font-bold text-gray-200 p-8'>
               {data.title}
             </h3>
+            <m.h3
+              className='offerText font-bold text-[2rem] p-8 text-gray-200 z-[30]  overflow-hidden'
+              initial={{ opacity: 0, y: 20 }}
+              animate={{
+                opacity: hoveredItem === data.id ? 1 : 0,
+                y: hoveredItem === data.id ? 0 : 20,
+              }}
+              transition={{
+                duration: hoveredItem === data.id ? 0.25 : 0,
+                ease: 'easeInOut',
+                delay: hoveredItem === data.id ? 0.5 : 0,
+              }}
+            >{data.title2}</m.h3>
             <m.p
-              className='offerText p-8 text-gray-200 z-[30]'
+              className='offerText p-8 text-gray-200 z-[30]  overflow-hidden'
               initial={{ opacity: 0, y: 20 }}
               animate={{
                 opacity: hoveredItem === data.id ? 1 : 0,

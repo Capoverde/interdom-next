@@ -33,7 +33,7 @@ export const HomePage = () => {
                     border-r border-l  xl:ml-[5%] grid-border-clr">
       <div className="row w-full h-1/2 xl:px-8 flex-col align-center items-center">
           <header className='block  pt-24'>
-            <m.h1 className="title text-slate-950 text-[4rem] overflow-hidden"
+            <m.h1 className="title font-bold text-slate-950 text-[4rem] overflow-hidden"
                   initial="initial"
                   animate="open"                  
                   variants={headerOne}
@@ -98,7 +98,7 @@ export const HomePage = () => {
        animate="visible"
        transition={{duration: 0.5, delay: 0.45}}
       >
-        <h2 className="title text-left text-6xl p-6 absolute bottom-0 text-gray-200 z-[30]">
+        <h2 className="title font-bold text-left text-6xl p-6 absolute bottom-0 text-gray-200 z-[30]">
          Zarządzanie <br />
          Najmem
         </h2>
@@ -125,7 +125,7 @@ export const HomePage = () => {
       animate="visible"
       transition={{duration: 0.8, delay: 1}}  
       >
-        <h2 className="title text-left text-7xl py-2 px-6 absolute bottom-0 text-gray-200 z-[30]">
+        <h2 className="title font-bold text-left text-7xl py-2 px-6 absolute bottom-0 text-gray-200 z-[30]">
          Wspólnoty <br />
          Mieszkaniowe
         </h2>    
@@ -152,7 +152,7 @@ export const HomePage = () => {
       animate="visible"
       transition={{duration: 1.2, delay: 1.4}} 
       >
-        <h2 className="title text-left text-7xl py-2 px-6 absolute bottom-0 text-gray-200 z-[10]">
+        <h2 className="title font-bold text-left text-7xl py-2 px-6 absolute bottom-0 text-gray-200 z-[10]">
          Prywatni <br />
          Właściciele
         </h2>

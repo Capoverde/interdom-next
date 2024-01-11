@@ -2,24 +2,29 @@
    position: relative;
    background-repeat: no-repeat;
    background-size: cover;
-   background-position: 0 0;
-   flex: 1 1 0%;
+   background-position: center;
+   flex: 1 1 0;
    flex-direction: row;
 
    &:nth-child(1){
-      background-image: url('../../../public/OfefrImage1.jpg');
+      background-image: url('../../../public/OfferImage1.jpg');
    }
    &:nth-child(2){
-      background-image: url();
+      background-image: url('../../../public/OfferImage2.jpg');
    }
    &:nth-child(3){
       background-image: url();
    }
+   
+   &:nth-child(4){
+      background-image: url('../../../public/OfferImage4.jpg');
+   }
+
 
    .offerTitle {
       position: absolute;
-      left: -90%;
-      top: 40%;
+      left: -70%;
+      top: 30%;
       transform: rotate(-90deg);
       white-space:nowrap;
    }
@@ -29,9 +34,8 @@
    }
 
    &:hover {
-      // flex: 3 0 0%;
-      flex-grow: 3;
-      transition: flex 0.5s ease-in-out;
+      flex: 3 1 0;
+      transition: all 0.5s ease-in-out;
       
       .content {
         background: rgba( 3, 7, 61, 0.55 );
@@ -40,7 +44,7 @@
         -webkit-backdrop-filter: blur( 10.5px );
         border: 1px solid rgba( 255, 255, 255, 0.18 );
         transition: opacity 0.45s ease-in-out;
-        backdrop-filter:  brightness(60%);
+        backdrop-filter:  brightness(20%);
 
          .offerTitle {
             opacity: 0;
@@ -50,10 +54,6 @@
          }      
 
          .offerText{
-            // -webkit-animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-            //         animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-            // opacity: 1;
-            // transition: opacity 0.45s ease-in-out;
             white-space: pre-wrap;
          }
       }
