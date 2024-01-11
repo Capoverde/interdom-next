@@ -152,7 +152,7 @@ export const HomePage = () => {
       animate="visible"
       transition={{duration: 1.2, delay: 1.4}} 
       >
-        <h2 className="title font-bold text-left text-7xl py-2 px-6 absolute bottom-0 text-gray-200 z-[10]">
+        <h2 className="title font-bold text-left text-7xl py-2 px-2 absolute bottom-0 text-gray-200 z-[10]">
          Prywatni <br />
          Właściciele
         </h2>

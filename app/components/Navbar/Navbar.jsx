@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion as m } from "framer-motion";
 import './Navbar.scss'
@@ -11,6 +12,19 @@ const navLinks = [
 ];
 
 export const Navbar = ({ toggleMenu, isOpen }) => {
+  
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   const containerVars = {
     initial: {
       y:"-100%",
@@ -70,8 +84,9 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
                         border-t border-[#3e3e3e]
                       bg-slate-950 text-gray-200 z-[50]`}
           >
+            <div className="w-full flex-1 h-full xl:border-r border-[#3e3e3e]"></div>
             {/* ----------------- CENTER ------------------ */}
-            <div className="h-full flex-col border-r border-[#3e3e3e] px-8">
+            <div className="h-full flex-1 flex-col border-r border-[#3e3e3e] px-8">
               <m.div
                 variants={containerVars}
                 initial="initial"
@@ -86,6 +101,7 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
                 ))}
               </m.div>
             </div>
+            <div className="w-full h-full flex-1"></div>
           </m.nav>
         )}
       </AnimatePresence>
