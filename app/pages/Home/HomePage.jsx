@@ -161,7 +161,6 @@ export const HomePage = () => {
          responsive={true}
          style={{objectFit: "cover"}}
         layout="fill"
-
         />
       </m.div>
     </div>

@@ -11,6 +11,15 @@ const navLinks = [
   { title: "Contact", href: "/ContactPage/Contact.jsx" },
 ];
 
+const contactItems = [
+  {id: 1, day: "Poniedziałek", hours: "09:00 - 16:00"},
+  {id: 2, day: "Wtorek", hours: "09:00 - 17:00"},
+  {id: 3, day: "Środa", hours: "Dzień bez przyjęć interesantów"},
+  {id: 4, day: "Czwartek", hours: "09:00 - 16:00"},
+  {id: 5, day: "Piątek", hours: "09:00 - 16:00"},
+  {id: 6, address: "ul. Rewolucji 1905 r. Nr 7, lok. 3/3a"},
+]
+
 export const Navbar = ({ toggleMenu, isOpen }) => {
   
   useEffect(() => {
@@ -66,8 +75,10 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
   const NavLinks = ({ title, href }) => {
   
     return (
-      <m.div variants={centerLinkVars} className={`navLink text-5xl mt-8 uppercase text-gray-200 `}>
-        <Link href={href} onClick={() => {toggleMenu();}}>{title}</Link>
+      <m.div variants={centerLinkVars} className={`navLink text-5xl mt-8 uppercase relative text-gray-200 `}>
+        <Link href={href} onClick={() => {toggleMenu();}}>
+          <span className="NavLinkSpan">{title}</span>
+        </Link>
       </m.div>
     );
   };
@@ -84,7 +95,33 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
                         border-t border-[#3e3e3e]
                       bg-slate-950 text-gray-200 z-[50]`}
           >
-            <div className="w-full flex-1 h-full xl:border-r border-[#3e3e3e]"></div>
+            {/* ----------------- LEFT ------------------ */}
+            <div className="w-full h-full grid place-content-center flex-1 xl:border-r border-[#3e3e3e] xl:px-11">
+            <div className="address mb-10 w-full">
+                <h3 className="text-3xl  uppercase" >
+                  Adres biura:
+                </h3>
+                {contactItems.map((address, id) => (
+                      <address className="mt-3" key={address.id}>
+                        <Link
+                         href="https://www.google.com/maps/place/Łódź, ul. Rewolucji 1905 r. nr 7"
+                         target="_blank"
+                         title="kliknij aby sprawdzić w google maps"
+                        >
+                         {address.address}
+                        </Link>
+                      </address>
+                  ))}                
+              </div>
+              <h3 className="text-3xl xl:mb-6  uppercase">dni i godziny pracy biura:</h3>
+              {contactItems.map((item) =>(
+                <div className="flex justify-between" key={item.id}>
+                    <div className="py-2">{item.day}</div>
+                    <div className="py-2">{item.hours}</div>
+                </div>
+              ))}
+
+            </div>
             {/* ----------------- CENTER ------------------ */}
             <div className="h-full flex-1 flex-col border-r border-[#3e3e3e] px-8">
               <m.div

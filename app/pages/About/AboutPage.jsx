@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export const About = () => {
   return (
-    <div className='xl:flex w-full h-full xl:ml-[5%] xl:mr-[5%] xl:border-l xl:border-r grid-border-clr'>
+    <div className='xl:flex w-full h-full xl:mx-[5%]  xl:border-l xl:border-r grid-border-clr'>
       {/*------------------------------- LEFT ---------------------------------------*/}
       <div className="xl:w-[82%] h-full xl:border-r  grid-border-clr">
         <section className={`${styles.aboutSection} border-b grid-border-clr xl:h-[500px] xl:flex-col`}>
