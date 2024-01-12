@@ -1,8 +1,15 @@
 .page-nav {
-    background-image: url('../../../public/menu-bg2\ 1.png');
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: bottom right;
+    // background-image: url('../../../public/menu-bg2\ 1.png');
+    // background-size: 50%;
+    // background-repeat: no-repeat;
+    // background-position: bottom right;
+
+    .navbar-right-box {
+        background-image: url('../../../public/menu-bg2\ 1.png');
+        background-size: 110%;
+        background-repeat: no-repeat;
+        background-position: bottom right;
+    }
 }
 
 .NavLinkSpan {

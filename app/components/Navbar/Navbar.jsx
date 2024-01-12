@@ -2,17 +2,11 @@ import { useEffect } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion as m } from "framer-motion";
 import { Blob } from '../Blob/Blob'
+import { containerVars } from "./helpers/containerVars";
+import { centerLinkVars } from "./helpers/centerLinkVars"
 import contactItems from './components/contactItems.json'
 import navLinks from './components/navLinks.json'
 import './Navbar.scss'
-
-// const navLinks = [
-//   { title: "Home", href: "/" },
-//   { title: "O nas", href: "/" },
-//   { title: "Oferta", href: "/" },
-//   { title: "e-kartoteka", href: "/" },
-//   { title: "Contact", href: "/ContactPage/Contact.jsx" },
-// ];
 
 export const Navbar = ({ toggleMenu, isOpen }) => {
   
@@ -28,44 +22,6 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
     };
   }, [isOpen]);
 
-  const containerVars = {
-    initial: {
-      y:"-100%",
-      transition: {
-        duration: 0.5,
-        delay: 0.8,
-        staggerChildren: 0.09,
-        staggerDirection: -1,
-      },
-    },
-    open: {
-      y:"9%",
-      transition: {
-        duration: 0.4,
-        delayChildren: 0.3,
-        staggerChildren: 0.09,
-        staggerDirection: 1,
-      },
-    },
-  };
-
-  const centerLinkVars = {
-    initial: {
-      y: "8vh",
-      transition: {
-        duration: 0.5,
-        ease: [0.37, 0, 0.63, 1],
-      },
-    },
-    open: {
-      y: 0,
-      transition: {
-        ease: [0, 0.55, 0.45, 1],
-        duration: 0.7,
-      },
-    },
-  };
-
   const NavLinks = ({ title, href }) => {
     return (
       <m.div variants={centerLinkVars} className={`navLink text-5xl mt-8 uppercase  text-gray-200 `}>
@@ -78,7 +34,7 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
 
   const AddressTitle = () => {
     return(
-     <m.h3 className="text-2xl font-bold xl:pt-4" variants={centerLinkVars}>Adres Biura:</m.h3>
+     <m.h3 className="text-2xl font-bold" variants={centerLinkVars}>Adres Biura:</m.h3>
     )
   }
 
@@ -99,10 +55,10 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
                 target="_blank"
                 title="kliknij aby sprawdzić w google maps"
               >
-               <m.div className="overflow-hidden" key={address.id} variants={centerLinkVars}>
+               <m.div key={address.id} variants={centerLinkVars}>
                    {address.address}
                </m.div>
-               <m.div className="overflow-hidden pt-1" key={address.id} variants={centerLinkVars}>
+               <m.div className="pt-1" key={address.id} variants={centerLinkVars}>
                  <span>{address.city}</span>
                </m.div>
               </Link>
@@ -191,7 +147,8 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
               ))}
             </m.div>
           </div>
-          <div className="relative w-full h-full flex-1">
+          {/* ---------------------- RIGHT ------------------------ */}
+          <div className="navbar-right-box relative w-full h-full flex-1">
             <Blob />
 
           </div>
