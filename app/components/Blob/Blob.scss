@@ -1,0 +1,13 @@
+.blob {
+    filter: blur(100px);
+    animation: blob-spin 9s infinite;
+}
+
+@keyframes blob-spin {
+    from{
+        transform: rotateZ(0);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}

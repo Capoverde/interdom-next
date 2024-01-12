@@ -1,27 +1,18 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion as m } from "framer-motion";
+import { Blob } from '../Blob/Blob'
+import contactItems from './components/contactItems.json'
+import navLinks from './components/navLinks.json'
 import './Navbar.scss'
 
-const navLinks = [
-  { title: "Home", href: "/" },
-  { title: "O nas", href: "/" },
-  { title: "Oferta", href: "/" },
-  { title: "e-kartoteka", href: "/" },
-  { title: "Contact", href: "/ContactPage/Contact.jsx" },
-];
-
-const contactItems = [
-  {id: 1, day: "Poniedziałek", hours: "09:00 - 16:00"},
-  {id: 2, day: "Wtorek", hours: "09:00 - 17:00"},
-  {id: 3, day: "Środa", hours: "Dzień bez przyjęć interesantów"},
-  {id: 4, day: "Czwartek", hours: "09:00 - 16:00"},
-  {id: 5, day: "Piątek", hours: "09:00 - 16:00"},
-  {id: 6, address: "ul. Rewolucji 1905 r. Nr 7, lok. 3/3a"},
-  {id: 7, phone1: "+42 630 84 55"},
-  {id: 8, phone2: "530 223 625"},
-  {id: 9, mail: "biuro@interdom-nieruchomosci.pl"},
-]
+// const navLinks = [
+//   { title: "Home", href: "/" },
+//   { title: "O nas", href: "/" },
+//   { title: "Oferta", href: "/" },
+//   { title: "e-kartoteka", href: "/" },
+//   { title: "Contact", href: "/ContactPage/Contact.jsx" },
+// ];
 
 export const Navbar = ({ toggleMenu, isOpen }) => {
   
@@ -87,42 +78,35 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
 
   const AddressTitle = () => {
     return(
-     <m.h3 className="text-3xl uppercase xl:pt-4" variants={centerLinkVars}>Adres Biura:</m.h3>
+     <m.h3 className="text-2xl font-bold xl:pt-4" variants={centerLinkVars}>Adres Biura:</m.h3>
     )
   }
 
   const WorkHoursTitle = () => {
     return(
-     <m.h3 className="text-3xl uppercase xl:py-4" variants={centerLinkVars}>Dni i godziny pracy biura:</m.h3>
+     <m.h3 className="text-2xl font-bold xl:py-4" variants={centerLinkVars}> Dni i godziny pracy biura:<sup className="text-red-500">*</sup></m.h3>
     )
   }
 
-  // const WorkHoursData = () => {
-  //   return (
-  //     <m.div variants={centerLinkVars} className="overflow-hidden">
-  //           {contactItems.map((item) =>(
-  //             <div className="flex justify-between overflow-hidden" key={item.id}>
-  //               <div className="py-2">{item.day}</div>
-  //               <div className="py-2">{item.hours}</div>
-  //             </div>
-  //           ))} 
-  //     </m.div>
-  //   );
-  // };
   const AddressData = () => {
     return (
       <m.div variants={centerLinkVars} className="mt-8  text-gray-200">
-          <div className="xl:pb-10 w-full">
+          <div className="xl:pb-3 w-full">
           {contactItems.map((address, id) => (
-            <m.div className=" overflow-hidden" key={address.id} variants={centerLinkVars}>
+            <>
               <Link
                 href="https://www.google.com/maps/place/Łódź, ul. Rewolucji 1905 r. nr 7"
                 target="_blank"
                 title="kliknij aby sprawdzić w google maps"
               >
-                {address.address}
+               <m.div className="overflow-hidden" key={address.id} variants={centerLinkVars}>
+                   {address.address}
+               </m.div>
+               <m.div className="overflow-hidden pt-1" key={address.id} variants={centerLinkVars}>
+                 <span>{address.city}</span>
+               </m.div>
               </Link>
-            </m.div>
+            </>
           ))}                
         </div>
       </m.div>
@@ -143,12 +127,13 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
                     text-gray-200 z-[50]`}
         >
           {/* ----------------- LEFT ------------------ */}
-          <m.div className="w-full h-full  flex-1 xl:border-r border-[#3e3e3e] xl:px-11"
+          <m.div className="w-full h-full flex-1 xl:border-r relative border-[#3e3e3e] xl:px-11"
             variants={containerVars}
             initial="initial"
             animate="open"
             exit="initial"
           >
+            <Blob />
             <div className="overflow-hidden" >
               <AddressTitle />
             </div>
@@ -167,14 +152,31 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
                        animate="open"
                        exit="initial"                         
                        >
-                  <m.div variants={centerLinkVars} className="py-2">{item.day}</m.div>
-                  <m.div variants={centerLinkVars} className="py-2">{item.hours}</m.div>
+                  <m.div variants={centerLinkVars} className="xl:py-2">{item.day}</m.div>
+                  <m.div variants={centerLinkVars} className="xl:py-2 xl:pr-[4rem]">{item.hours}</m.div>
                 </m.div>
+              ))}
+            </div>
+            <div>
+             {contactItems.map((info)=>(
+                <m.div className="overflow-hidden" 
+                 key={info.id}
+                 variants={containerVars}
+                 initial="initial"
+                 animate="open"
+                 exit="initial"                         
+                >              
+                  <m.div variants={centerLinkVars} className="text-xs text-gray-500 text-left pr-[4rem]">
+                  <sup className="text-red-500">{info.prefix}</sup>
+                    {info.info}
+                  </m.div>
+                </m.div>  
               ))}
             </div>
           </m.div>
           {/* ----------------- CENTER ------------------ */}
-          <div className="h-full flex-1 flex-col border-r border-[#3e3e3e] px-8">
+          <div className="relative h-full flex-1 flex-col border-r border-[#3e3e3e] px-8">
+            <Blob />
             <m.div
               variants={containerVars}
               initial="initial"
@@ -189,7 +191,10 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
               ))}
             </m.div>
           </div>
-          <div className="w-full h-full flex-1"></div>
+          <div className="relative w-full h-full flex-1">
+            <Blob />
+
+          </div>
         </m.nav>
       )}
     </AnimatePresence>

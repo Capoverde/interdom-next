@@ -1,0 +1,7 @@
+[
+ { "title": "Home", "href": "/" },
+ { "title": "O nas", "href": "/" },
+ { "title": "Oferta", "href": "/" },
+ { "title": "e-kartoteka", "href": "/" },
+ { "title": "Contact", "href": "/ContactPage/Contact.jsx" }
+]

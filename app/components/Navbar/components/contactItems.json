@@ -1,0 +1,15 @@
+
+ [
+    {"id": "1", "day": "Poniedziałek", "hours": "09:00 - 16:00"},
+    {"id": "2", "day": "Wtorek", "hours": "09:00 - 17:00"},
+    {"id": "3", "day": "Środa", "hours": "Dzień bez przyjęć interesantów"},
+    {"id": "4", "day": "Czwartek", "hours": "09:00 - 16:00"},
+    {"id": "5", "day": "Piątek", "hours": "09:00 - 16:00"},
+    {"id": "6", "address": "ul. Rewolucji 1905 r. Nr 7, lok. 3/3a"},
+    {"id": "7", "city": "90-207 Łódź"},
+    {"id": "8", "phone1": "+42 630 84 55"},
+    {"id": "9", "phone2": "530 223 625"},
+    {"id": "10", "mail": "biuro@interdom-nieruchomosci.pl"},
+    {"id": "11", "info": "Godziny pracy biura podane powyżej są standardowe i mogą ulec zmianie, szczególnie w trakcie świąt państwowych. Prosimy o sprawdzenie bieżącego harmonogramu pracy, aby uzyskać najnowsze informacje dotyczące dostępności biura.", "prefix": "*"}
+  ]
+  
