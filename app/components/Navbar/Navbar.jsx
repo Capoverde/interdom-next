@@ -8,6 +8,10 @@ import { boxVars } from "./helpers/boxVars"
 import contactItems from './NavbarData/contactItems.json'
 import navLinks from './NavbarData/navLinks.json'
 import { MailAndPhones } from "./NavbarData/mailAndPhones";
+import { AddressTitle } from "./components/AddressTitle";
+import { WorkHoursTitle } from "./components/WorkHoursTitle";
+import { PhonesMailTitle } from "./components/PhonesMailTitle";
+import { SocialsTitle } from "./components/SocialsTitle";
 import './Navbar.scss'
 
 export const Navbar = ({ toggleMenu, isOpen }) => {
@@ -33,30 +37,6 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
       </m.div>
     );
   };
-
-  const AddressTitle = () => {
-    return(
-     <m.h3 className="text-2xl font-bold" variants={centerLinkVars}>Adres Biura:</m.h3>
-    )
-  }
-
-  const WorkHoursTitle = () => {
-    return(
-     <m.h3 className="text-2xl font-bold xl:py-4" variants={centerLinkVars}> Dni i godziny pracy biura:<sup className="text-red-500">*</sup></m.h3>
-    )
-  }
-
-  const PhonesMailTitle = () => {
-    return(
-     <m.h3 className="text-2xl font-bold" variants={centerLinkVars}>Skontaktuj się z nami:</m.h3>
-    )
-  }
-
-  const SocialsTitle = () => {
-    return(
-     <m.h3 className="text-2xl font-bold" variants={centerLinkVars}>Obserwuj nas:</m.h3>
-    )
-  }
 
   const AddressData = () => {
     return (
