@@ -30,8 +30,8 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
     { id: 1, href: "biuro@interdom-nieruchomosci.pl", mail: "biuro@interdom-nieruchomosci.pl", icon: <IoMdMail /> },
     { id: 2, href: "+42 630 84 55", phone1: "+42 630 84 55", icon: <FaPhoneAlt /> },
     { id: 3, href: "+48 530 223 625", phone2: "+48 530 223 625", icon: <FaMobile /> },
-    { id: 4, href: "www.facebook.com", title: "sprawdź nasz Facebook", facebook: "Facebook", socIcon: <FaSquareFacebook /> },
-    { id: 5, href: "www.linkedin.com", title: "sprawdź nasz profil na LinkedIn", linkedin: "LinkedIn", socIcon: <FaLinkedin /> }
+    { id: 4, href: "https://www.facebook.com/", title: "sprawdź nasz Facebook", facebook: "Facebook", socIcon: <FaSquareFacebook /> },
+    { id: 5, href: "https://www.linkedin.com/", title: "sprawdź nasz profil na LinkedIn", linkedin: "LinkedIn", socIcon: <FaLinkedin /> }
   ];
   
 
@@ -108,7 +108,7 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
                     text-gray-200 z-[50]`}
         >
           {/* ----------------- LEFT ------------------ */}
-          <m.div className="xl:pt-24 w-full h-full flex-1 xl:border-r relative border-[#3e3e3e] xl:px-11"
+          <m.div className="xl:pt-24 w-full h-full flex-1 xl:border-r relative border-[#3e3e3e] xl:px-11 text-gray-300"
             variants={boxVars}
             initial="initial"
             animate="open"
@@ -173,7 +173,7 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
             </m.div>
           </div>
           {/* ---------------------- RIGHT ------------------------ */}
-          <div className="navbar-right-box relative w-full h-full flex-1">
+          <div className="navbar-right-box relative w-full h-full flex-1 text-gray-300">
             <Blob />
             <div className="overflow-hidden xl:pt-24 xl:px-11">
               <PhonesMailTitle />
@@ -206,7 +206,9 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
             <div className="overflow-hidden flex xl:pl-11 xl:py-5 [&>*:last-child]:ml-4">
               {MailAndPhones.map((item) => (
                 <m.div variants={centerLinkVars} key={item.id} className="social-box ">
-                  <Link className="text-2xl" title={item.title} href={item.href}>{item.socIcon}</Link>
+                  <Link className="text-2xl" title={item.title} href={item.href} target="_blank">
+                    {item.socIcon}
+                  </Link>
                 </m.div>
               ))}
             </div>
