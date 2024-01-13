@@ -1,9 +1,4 @@
 .page-nav {
-    // background-image: url('../../../public/menu-bg2\ 1.png');
-    // background-size: 50%;
-    // background-repeat: no-repeat;
-    // background-position: bottom right;
-
     .navbar-right-box {
         background-image: url('../../../public/menu-bg2\ 1.png');
         background-size: 110%;
@@ -12,22 +7,43 @@
     }
 }
 
-.NavLinkSpan {
-    &::before {
-        background-color: currentColor;
-        bottom: 0;
-        content: "";
-        height: .125rem;
-        left: 0;
-        position: absolute;
-        width: 0;
-        transition: all 0.35s ease-in-out;
-    }
-    
-    &:hover {
+.NavLink {
+  position: relative;
+  white-space: nowrap;
+}
 
-        &::before {
-            width: 100%;
-        }
+.NavLinkSpanPolygon {
+    // -webkit-clip-path: polygon(0 0,0 0,0 100%,0 100%);
+    // clip-path: polygon(0 0,0 0,0 100%,0 100%);
+    font-weight: 800;
+    left:0;
+    position: absolute;
+    transition-duration: .5s;
+ }
+
+.NavLinkSpan {
+    // width: 100%;
+
+   &::before {
+    content: "";
+    background-color: currentColor;
+    bottom: 0;
+    height: .125rem;
+    opacity: 0.5;
+    left: 0;
+    position: absolute;
+    width: 0;
+    transition: all 0.35s ease-in-out;
+   }
+
+   &:hover {
+       .NavLinkSpanPolygon{
+           -webkit-clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+           clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+       }
+
+       &::before {
+        width: 100%;
+       }
     }
 }

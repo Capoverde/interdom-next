@@ -1,4 +1,4 @@
-export   const centerLinkVars = {
+export const centerLinkVars = {
     initial: {
       y: "8vh",
       transition: {

@@ -4,8 +4,9 @@ import { AnimatePresence, motion as m } from "framer-motion";
 import { Blob } from '../Blob/Blob'
 import { containerVars } from "./helpers/containerVars";
 import { centerLinkVars } from "./helpers/centerLinkVars"
-import contactItems from './components/contactItems.json'
-import navLinks from './components/navLinks.json'
+import { boxVars } from "./helpers/boxVars"
+import contactItems from './NavbarData/contactItems.json'
+import navLinks from './NavbarData/navLinks.json'
 import './Navbar.scss'
 
 export const Navbar = ({ toggleMenu, isOpen }) => {
@@ -22,11 +23,12 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
     };
   }, [isOpen]);
 
-  const NavLinks = ({ title, href }) => {
+  const NavLinks = ({ dataText, title, href }) => {
     return (
-      <m.div variants={centerLinkVars} className={`navLink text-5xl mt-8 uppercase  text-gray-200 `}>
-        <Link href={href} onClick={() => {toggleMenu();}}>
-          <span className="NavLinkSpan">{title}</span>
+      <m.div variants={centerLinkVars} className={`text-5xl mt-8 uppercase  text-gray-200 `}>
+        <Link className="navLink" href={href} onClick={() => {toggleMenu();}}>
+          <span  data-text={dataText} className="NavLinkSpan">{title}</span>
+          {/* <span  data-text={dataText} className="NavLinkSpanPolygon">{title}</span> */}
         </Link>
       </m.div>
     );
@@ -83,8 +85,8 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
                     text-gray-200 z-[50]`}
         >
           {/* ----------------- LEFT ------------------ */}
-          <m.div className="w-full h-full flex-1 xl:border-r relative border-[#3e3e3e] xl:px-11"
-            variants={containerVars}
+          <m.div className="xl:pt-24 w-full h-full flex-1 xl:border-r relative border-[#3e3e3e] xl:px-11"
+            variants={boxVars}
             initial="initial"
             animate="open"
             exit="initial"
@@ -142,7 +144,7 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
             >
               {navLinks.map((link, index) => (
                 <div className="overflow-hidden" key={index}>
-                  <NavLinks title={link.title} href={link.href} />
+                  <NavLinks dataText={link.dataText} title={link.title} href={link.href} />
                 </div>
               ))}
             </m.div>
@@ -150,7 +152,6 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
           {/* ---------------------- RIGHT ------------------------ */}
           <div className="navbar-right-box relative w-full h-full flex-1">
             <Blob />
-
           </div>
         </m.nav>
       )}
