@@ -7,6 +7,14 @@ import { centerLinkVars } from "./helpers/centerLinkVars"
 import { boxVars } from "./helpers/boxVars"
 import contactItems from './NavbarData/contactItems.json'
 import navLinks from './NavbarData/navLinks.json'
+// import { MailAndPhones } from './NavbarData/mailAndPhones.js'
+// import { FaPhoneAlt } from "react-icons/fa";
+// import { FaMobile } from "react-icons/fa";
+// import { IoMdMail } from "react-icons/io";
+// import { FaSquareFacebook } from "react-icons/fa6";
+// import { FaLinkedin } from "react-icons/fa";
+import { IoMdMail } from 'react-icons/io';
+import { FaPhoneAlt, FaMobile, FaSquareFacebook, FaLinkedin } from 'react-icons/fa';
 import './Navbar.scss'
 
 export const Navbar = ({ toggleMenu, isOpen }) => {
@@ -23,12 +31,20 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
     };
   }, [isOpen]);
 
-  const NavLinks = ({ dataText, title, href }) => {
+   const MailAndPhones = [
+    { id: 1, href: "biuro@interdom-nieruchomosci.pl", mail: "biuro@interdom-nieruchomosci.pl", icon: <IoMdMail /> },
+    { id: 2, href: "+42 630 84 55", phone1: "+42 630 84 55", icon: <FaPhoneAlt /> },
+    { id: 3, href: "+48 530 223 625", phone2: "+48 530 223 625", icon: <FaMobile /> },
+    { id: 4, href: "www.facebook.com", facebook: "Facebook", socIcon: <FaSquareFacebook /> },
+    { id: 5, href: "www.linkedin.com", linkedin: "LinkedIn", socIcon: <FaLinkedin /> }
+  ];
+  
+
+  const NavLinks = ({ title, href }) => {
     return (
       <m.div variants={centerLinkVars} className={`text-5xl mt-8 uppercase  text-gray-200 `}>
         <Link className="navLink" href={href} onClick={() => {toggleMenu();}}>
-          <span  data-text={dataText} className="NavLinkSpan">{title}</span>
-          {/* <span  data-text={dataText} className="NavLinkSpanPolygon">{title}</span> */}
+          <span className="NavLinkSpan">{title}</span>
         </Link>
       </m.div>
     );
@@ -43,6 +59,12 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
   const WorkHoursTitle = () => {
     return(
      <m.h3 className="text-2xl font-bold xl:py-4" variants={centerLinkVars}> Dni i godziny pracy biura:<sup className="text-red-500">*</sup></m.h3>
+    )
+  }
+
+  const PhonesMailTitle = () => {
+    return(
+     <m.h3 className="text-2xl font-bold" variants={centerLinkVars}>Skontaktuj się z nami:</m.h3>
     )
   }
 
@@ -144,7 +166,7 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
             >
               {navLinks.map((link, index) => (
                 <div className="overflow-hidden" key={index}>
-                  <NavLinks dataText={link.dataText} title={link.title} href={link.href} />
+                  <NavLinks  title={link.title} href={link.href} />
                 </div>
               ))}
             </m.div>
@@ -152,6 +174,31 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
           {/* ---------------------- RIGHT ------------------------ */}
           <div className="navbar-right-box relative w-full h-full flex-1">
             <Blob />
+            <div className="overflow-hidden xl:pt-24 xl:px-11">
+              <PhonesMailTitle />
+            </div>
+            <m.div
+              variants={containerVars}
+              initial="initial"
+              animate="open"
+              exit="initial"        
+              className="w-full"      
+            >
+              {MailAndPhones.map((item) =>(
+                <div key={item.id} className="flex items-center xl:px-11 xl:pt-6 ">
+                  <div className="overflow-hidden">
+                   <m.div variants={centerLinkVars} className="mr-4">{item.icon}</m.div>
+                  </div>
+                  <div className="overflow-hidden">
+                    <m.div variants={centerLinkVars}>
+                     <Link href={`mailto:${item.mail}`}>{item.mail}</Link>
+                     <Link href={`tel:${item.href}`}>{item.phone1}</Link>
+                     <Link href={`tel:${item.href}`}>{item.phone2}</Link>
+                    </m.div>
+                  </div>
+                </div>
+              ))}
+            </m.div>
           </div>
         </m.nav>
       )}
