@@ -7,14 +7,9 @@ import { centerLinkVars } from "./helpers/centerLinkVars"
 import { boxVars } from "./helpers/boxVars"
 import contactItems from './NavbarData/contactItems.json'
 import navLinks from './NavbarData/navLinks.json'
-// import { MailAndPhones } from './NavbarData/mailAndPhones.js'
-// import { FaPhoneAlt } from "react-icons/fa";
-// import { FaMobile } from "react-icons/fa";
-// import { IoMdMail } from "react-icons/io";
-// import { FaSquareFacebook } from "react-icons/fa6";
-// import { FaLinkedin } from "react-icons/fa";
 import { IoMdMail } from 'react-icons/io';
-import { FaPhoneAlt, FaMobile, FaSquareFacebook, FaLinkedin } from 'react-icons/fa';
+import { FaPhoneAlt, FaMobile, FaLinkedin } from 'react-icons/fa';
+import { FaSquareFacebook } from "react-icons/fa6";
 import './Navbar.scss'
 
 export const Navbar = ({ toggleMenu, isOpen }) => {
@@ -35,8 +30,8 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
     { id: 1, href: "biuro@interdom-nieruchomosci.pl", mail: "biuro@interdom-nieruchomosci.pl", icon: <IoMdMail /> },
     { id: 2, href: "+42 630 84 55", phone1: "+42 630 84 55", icon: <FaPhoneAlt /> },
     { id: 3, href: "+48 530 223 625", phone2: "+48 530 223 625", icon: <FaMobile /> },
-    { id: 4, href: "www.facebook.com", facebook: "Facebook", socIcon: <FaSquareFacebook /> },
-    { id: 5, href: "www.linkedin.com", linkedin: "LinkedIn", socIcon: <FaLinkedin /> }
+    { id: 4, href: "www.facebook.com", title: "sprawdź nasz Facebook", facebook: "Facebook", socIcon: <FaSquareFacebook /> },
+    { id: 5, href: "www.linkedin.com", title: "sprawdź nasz profil na LinkedIn", linkedin: "LinkedIn", socIcon: <FaLinkedin /> }
   ];
   
 
@@ -65,6 +60,12 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
   const PhonesMailTitle = () => {
     return(
      <m.h3 className="text-2xl font-bold" variants={centerLinkVars}>Skontaktuj się z nami:</m.h3>
+    )
+  }
+
+  const SocialsTitle = () => {
+    return(
+     <m.h3 className="text-2xl font-bold" variants={centerLinkVars}>Obserwuj nas:</m.h3>
     )
   }
 
@@ -191,14 +192,24 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
                   </div>
                   <div className="overflow-hidden">
                     <m.div variants={centerLinkVars}>
-                     <Link href={`mailto:${item.mail}`}>{item.mail}</Link>
-                     <Link href={`tel:${item.href}`}>{item.phone1}</Link>
-                     <Link href={`tel:${item.href}`}>{item.phone2}</Link>
+                     <Link href={`mailto:${item.mail}`} title="kliknij aby napisać maila">{item.mail}</Link>
+                     <Link href={`tel:${item.href}`} title="kliknij aby do nas zadzwonić">{item.phone1}</Link>
+                     <Link href={`tel:${item.href}`} title="kliknij aby do nas zadzwonić">{item.phone2}</Link>
                     </m.div>
                   </div>
                 </div>
               ))}
             </m.div>
+            <div className="overflow-hidden xl:px-11">
+              <SocialsTitle />
+            </div>
+            <div className="overflow-hidden flex xl:pl-11 xl:py-5 [&>*:last-child]:ml-4">
+              {MailAndPhones.map((item) => (
+                <m.div variants={centerLinkVars} key={item.id} className="social-box ">
+                  <Link className="text-2xl" title={item.title} href={item.href}>{item.socIcon}</Link>
+                </m.div>
+              ))}
+            </div>
           </div>
         </m.nav>
       )}
