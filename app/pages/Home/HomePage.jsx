@@ -98,8 +98,32 @@ export const HomePage = () => {
        transition={{duration: 0.5, delay: 0.45}}
       >
         <h2 className="title font-bold text-left text-6xl p-6 absolute bottom-0 text-gray-200 z-[30]">
-         Zarządzanie <br />
-         Najmem
+         <m.span className='inline-block'
+                  variants={{
+                    hidden: { 
+                      opacity: 0,
+                      y: 15 },
+                    visible: { 
+                      opacity: 1, 
+                      y: 0 }
+                  }}
+                  initial="hidden"
+                  animate="visible"
+                  transition={{duration: 1, delay: 1.8}}     
+         >Zarządzanie</m.span><br />
+         <m.span className='inline-block'
+                  variants={{
+                    hidden: { 
+                      opacity: 0,
+                      y: 15 },
+                    visible: { 
+                      opacity: 1, 
+                      y: 0 }
+                  }}
+                  initial="hidden"
+                  animate="visible"
+                  transition={{duration: 1, delay: 2}}               
+         >Najmem</m.span>
         </h2>
         <Image 
          src={"/HomeImage1.jpeg"}
@@ -125,8 +149,32 @@ export const HomePage = () => {
       transition={{duration: 0.8, delay: 1}}  
       >
         <h2 className="title font-bold text-left text-7xl py-2 px-6 absolute bottom-0 text-gray-200 z-[30]">
-         Wspólnoty <br />
-         Mieszkaniowe
+         <m.span className="inline-block"
+                variants={{
+                  hidden: { 
+                    opacity: 0,
+                    y: 15 },
+                  visible: { 
+                    opacity: 1, 
+                    y: 0 }
+                }}
+                initial="hidden"
+                animate="visible"
+                transition={{duration: 1, delay: 2.1}}             
+         >Wspólnoty</m.span><br />
+         <m.span className="inline-block"
+                variants={{
+                  hidden: { 
+                    opacity: 0,
+                    y: 15 },
+                  visible: { 
+                    opacity: 1, 
+                    y: 0 }
+                }}
+                initial="hidden"
+                animate="visible"
+                transition={{duration: 1, delay: 2.2}}             
+         >Mieszkaniowe</m.span> 
         </h2>    
         <Image 
          src={"/HomeImage2.jpeg"}
@@ -152,8 +200,32 @@ export const HomePage = () => {
       transition={{duration: 1.2, delay: 1.4}} 
       >
         <h2 className="title font-bold text-left text-7xl py-2 px-2 absolute bottom-0 text-gray-200 z-[10]">
-         Prywatni <br />
-         Właściciele
+         <m.span className="inline-block"
+                variants={{
+                  hidden: { 
+                    opacity: 0,
+                    y: 15 },
+                  visible: { 
+                    opacity: 1, 
+                    y: 0 }
+                }}
+                initial="hidden"
+                animate="visible"
+                transition={{duration: 1, delay: 2.3}}             
+         >Prywatni</m.span><br />
+         <m.span className="inline-block"
+                variants={{
+                  hidden: { 
+                    opacity: 0,
+                    y: 15 },
+                  visible: { 
+                    opacity: 1, 
+                    y: 0 }
+                }}
+                initial="hidden"
+                animate="visible"
+                transition={{duration: 1, delay: 2.4}}             
+         >Właściciele</m.span> 
         </h2>
         <Image 
          src={"/HomeImage3.jpg"}
