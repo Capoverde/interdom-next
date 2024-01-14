@@ -7,6 +7,8 @@ import { centerLinkVars } from "./helpers/centerLinkVars"
 import { boxVars } from "./helpers/boxVars"
 import contactItems from './NavbarData/contactItems.json'
 import navLinks from './NavbarData/navLinks.json'
+import { NavLinks } from './components/Navlinks'
+import { AddressData } from './components/AddressData'
 import { MailAndPhones } from "./NavbarData/mailAndPhones";
 import { AddressTitle } from "./components/Headers/AddressTitle";
 import { WorkHoursTitle } from "./components/Headers/WorkHoursTitle";
@@ -27,41 +29,6 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
       document.body.style.overflow = 'unset';
     };
   }, [isOpen]);
-
-  const NavLinks = ({ title, href }) => {
-    return (
-      <m.div variants={centerLinkVars} className={`text-5xl mt-8 uppercase  text-gray-200 `}>
-        <Link className="navLink" href={href} onClick={() => {toggleMenu();}}>
-          <span className="NavLinkSpan">{title}</span>
-        </Link>
-      </m.div>
-    );
-  };
-
-  const AddressData = () => {
-    return (
-      <m.div variants={centerLinkVars} className="mt-8  text-gray-200">
-          <div className="xl:pb-3 w-full">
-          {contactItems.map((address, id) => (
-            <>
-              <Link
-                href="https://www.google.com/maps/place/Łódź, ul. Rewolucji 1905 r. nr 7"
-                target="_blank"
-                title="kliknij aby sprawdzić w google maps"
-              >
-               <m.div key={address.id} variants={centerLinkVars}>
-                   {address.address}
-               </m.div>
-               <m.div className="pt-1" key={address.id} variants={centerLinkVars}>
-                 <span>{address.city}</span>
-               </m.div>
-              </Link>
-            </>
-          ))}                
-        </div>
-      </m.div>
-    );
-  };
 
   return (
     <AnimatePresence>
