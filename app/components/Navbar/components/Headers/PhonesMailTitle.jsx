@@ -1,5 +1,5 @@
 import { motion as m } from "framer-motion";
-import { centerLinkVars } from "../helpers/centerLinkVars";
+import { centerLinkVars } from "../../helpers/centerLinkVars";
 
 export const PhonesMailTitle = () => {
     return(

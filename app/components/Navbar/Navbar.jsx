@@ -8,10 +8,10 @@ import { boxVars } from "./helpers/boxVars"
 import contactItems from './NavbarData/contactItems.json'
 import navLinks from './NavbarData/navLinks.json'
 import { MailAndPhones } from "./NavbarData/mailAndPhones";
-import { AddressTitle } from "./components/AddressTitle";
-import { WorkHoursTitle } from "./components/WorkHoursTitle";
-import { PhonesMailTitle } from "./components/PhonesMailTitle";
-import { SocialsTitle } from "./components/SocialsTitle";
+import { AddressTitle } from "./components/Headers/AddressTitle";
+import { WorkHoursTitle } from "./components/Headers/WorkHoursTitle";
+import { PhonesMailTitle } from "./components/Headers/PhonesMailTitle";
+import { SocialsTitle } from "./components/Headers/SocialsTitle";
 import './Navbar.scss'
 
 export const Navbar = ({ toggleMenu, isOpen }) => {
