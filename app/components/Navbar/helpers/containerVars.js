@@ -9,7 +9,7 @@ export const containerVars = {
       },
     },
     open: {
-      y:"9%",
+      y:"0",
       transition: {
         duration: 0.4,
         delayChildren: 0.3,

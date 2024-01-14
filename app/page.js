@@ -10,16 +10,9 @@ import { ContactPage } from "./pages/ContactPage/ContactPage";
 import { Footer } from './components/Footer/Footer'
 
 export default function Home() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuOpen((prevMenuOpen) => !prevMenuOpen);
-  };
-
   return (
     <>
-      <Header toggleMenu={toggleMenu} />
-      <Navbar isOpen={menuOpen} toggleMenu={toggleMenu} />
+      <Header />
       <HomePage />
       <ScoreBanner />
       <About />

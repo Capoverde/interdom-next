@@ -84,7 +84,7 @@ export const HomePage = () => {
              </m.div>  
           </Link>
       </div>
-      <m.div className={`heroImageBox heroImageBox-1 row w-full h-1/2 bg-gray-300 relative overflow-hidden`}
+      <m.div className="heroImageBox heroImageBox-1 row w-full h-1/2 bg-gray-300 relative overflow-hidden"
        variants={{
          hidden: { 
           clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
@@ -111,7 +111,7 @@ export const HomePage = () => {
     </div>
     <div className="col h-full grow">
       <div className="h-1/4 w-full"></div>
-      <m.div className={`heroImageBox heroImageBox-2 bg-gray-300 h-3/4 w-[90%] mx-auto my-auto overflow-hidden`}
+      <m.div className="heroImageBox heroImageBox-2 bg-gray-300 h-3/4 w-[90%] mx-auto my-auto overflow-hidden"
        variants={{ 
         hidden: { 
          clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
@@ -138,7 +138,7 @@ export const HomePage = () => {
     </div>
     <div className="col h-full w-[25.1%] border-l border-r mr-[5%] grid-border-clr">
       <div className="w-full h-[15%]"></div>
-      <m.div className={`heroImageBox heroImageBox-3 w-full h-[85%] bg-gray-300 overflow-hidden`}
+      <m.div className="heroImageBox heroImageBox-3 w-full h-[85%] bg-gray-300 overflow-hidden"
        variants={{
         hidden: { 
          clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",

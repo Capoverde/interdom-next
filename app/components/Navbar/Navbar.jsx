@@ -125,7 +125,7 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
             </div>
           </m.div>
           {/* ----------------- CENTER ------------------ */}
-          <div className="relative h-full flex-1 flex-col border-r border-[#3e3e3e] px-8">
+          <div className="relative h-full flex-1 flex-col border-r border-[#3e3e3e] px-8 xl:pt-20">
             <Blob />
             <m.div
               variants={containerVars}
