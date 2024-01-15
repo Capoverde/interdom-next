@@ -1,0 +1,32 @@
+[
+ {
+     "id": "1",
+     "title":"O nas", 
+     "text": "Historia firmy rozpoczęła się w 1996 roku, kiedy to Jolanta Słobińska postanowiła połączyć swoje umiejętności zarządzania nieruchomościami z wizją oferowania kompleksowej obsługi wspólnot mieszkaniowych oraz prywatnych właścicieli kamienic. 'Interdom' szybko stał się rozpoznawalnym graczem na lokalnym rynku nieruchomości w Łodzi.",
+     "image": "/AboutImage1.jpg"
+ },
+ {
+    "id": "2",
+    "title": "Specjalizacja i Misja",  
+    "text": "Od samego początku firma skoncentrowała się na obszarze zarządzania Wspólnotami Mieszkaniowymi oferując kompleksowe rozwiązania dla właścicieli nieruchomości.\nMisją 'Interdom' jest nie tylko zapewnienie skutecznej obsługi finansowo-księgowej, ale także reprezentacja Wspólnot i Właścicieli przed sądami, urzędami oraz innymi instytucjami.",
+    "image": "/AboutImage2.jpg"
+ },
+ {
+    "id": "3",
+    "title":"Zaangażowanie Właścicieli",  
+    "text": "Jolanta Słobińska i Wojciech Słobiński aktywnie angażują się w reprezentowanie interesów swoich kystępując na podstawie udzielonych pełnomocnictw. Dzięki ich profesjonalizmowi i doświadlientów, wczeniu 'Interdom' skutecznie egzekwuje powierzone zadania, dbając o dobro i stabilność zarządzanych nieruchomości.",
+    "image": "/AboutImage3.jpg"
+ },
+ {
+    "id": "4",
+    "title":"Solidna Współpraca",  
+    "text": "Firma 'Interdom' zawsze kładzie nacisk na solidność i jakość współpracy. Dlatego też, współpracuje wyłącznie ze sprawdzonymi podmiotami na rynku nieruchomości. Kancelarie prawne, brokerzy ubezpieczeniowi, firmy sprzątające, hydrauliczne, dekarskie, budowlane, elektryczne i inne. Wszyscy są wybierani pod kątem ich profesjonalizmu, by gwarantować klientom 'Interdom' odpowiedni poziom usług.",
+    "image": "/AboutImage4.jpg"
+ },
+ {
+    "id": "5",
+    "title":"Bezpieczeństwo Finansowe",  
+    "text": "'Interdom' nie tylko gwarantuje kompleksową obsługę, ale także dba o bezpieczeństwo finansowe swoich klientów. Posiadamy obowiązkowe OC Zarządcy Nieruchomości na imponującą kwotę 1.000.000,00 zł, co stanowi zabezpieczenie na wypadek ewentualnych szkód wyrządzonych w związku z prowadzoną działalnością.",
+    "image": "/AboutImage5.jpeg"
+ }
+]
