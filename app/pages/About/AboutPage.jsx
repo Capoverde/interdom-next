@@ -10,7 +10,7 @@ import styles from './About.scss'
 
 export const About = () => {
   const controlsArray = aboutData.map(() => useAnimation());
-  const refs = aboutData.map(() => useInView({ triggerOnce: true }));
+  const refs = aboutData.map(() => useInView({ triggerOnce: false }));
 
   useEffect(() => {
     aboutData.forEach((item, i) => {
@@ -32,16 +32,26 @@ export const About = () => {
             {item.id % 2 !== 0 ? (
               <div className='xl:flex xs:flex-col xl:pb-8 w-full xl:border-b xl:border-r grid-border-clr '>
                 <div ref={refs[i].ref} className='grid-item-left flex-col self-center h-full flex-1 xl:px-6'>
-                  <m.h2 className='xl:text-5xl pb-6'
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={controlsArray[i]}
-                    transition={{
-                      duration: 1,
-                      ease: 'easeInOut',
-                      delay: i * 0.1,
-                    }}
-                  >{item.title}</m.h2>
-                  <p className='mb-16 pr-24'>{item.text}</p>
+                  <div className="overflow-hidden">
+                   <m.h2 className='xl:text-5xl pb-6'
+                     initial={{ opacity: 0, y: 20 }}
+                     animate={controlsArray[i]}
+                     transition={{
+                       duration: 1,
+                       ease: 'easeInOut',
+                       delay: i * 0.1,
+                     }}
+                   >{item.title}</m.h2>
+                  </div>
+                  <m.p className='mb-16 pr-24'
+                     initial={{ opacity: 0, y: 20 }}
+                     animate={controlsArray[i]}
+                     transition={{
+                       duration: 1,
+                       ease: 'easeInOut',
+                       delay: i * 0.2,
+                     }}                  
+                  >{item.text}</m.p>
                   <Link className='flex items-center pb-8' href="#">
                     <span className="font-bold mr-3">czytaj dalej</span> <PiArrowDownThin className="inline-block text-xl -rotate-[90deg]" />
                   </Link>
@@ -59,17 +69,32 @@ export const About = () => {
                 </div>
               </div>
             ) : (
-              <div className='xl:flex xs:flex-col xl:w-full xl:pb-8 border-b grid-border-clr'>
+              <div ref={refs[i].ref} className='xl:flex xs:flex-col xl:w-full xl:pb-8 
+                                                border-b grid-border-clr'>
                 <div className='grid-item-left flex-1 xl:px-6'>
-                  <Image
-                    className={`${styles.AboutImage1} xl:mt-8`}
-                    src={item.image}
-                    width={700}
-                    height={50}
-                    style={{ objectFit: "contain" }}
-                    quality={100}
-                    alt={item.title}
-                  />
+                  <m.div className="image-box xl:mt-8"
+                         variants={{
+                          hidden: { 
+                           clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
+                         },
+                          visible: { 
+                           clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)",
+                         }
+                        }}
+                        initial="hidden"
+                        animate="visible"
+                        transition={{duration: 0.5, delay: 0.45}}                  
+                  >
+                   <Image
+                     className={`${styles.AboutImage1}`}
+                     src={item.image}
+                     width={700}
+                     height={50}
+                     style={{ objectFit: "contain" }}
+                     quality={100}
+                     alt={item.title}
+                   />
+                  </m.div>
                 </div>
                 <div ref={refs[i].ref} className='grid-item-right felx-col self-center flex-1 xl:px-6'>
                   <m.h2 className='xl:text-5xl xl:py-6'
@@ -81,7 +106,15 @@ export const About = () => {
                       delay: i * 0.1,
                     }}
                   >{item.title}</m.h2>
-                  <p className='mb-16 xl:pr-24'>{item.text}</p>
+                  <m.p className='mb-16 xl:pr-24'
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={controlsArray[i]}
+                    transition={{
+                      duration: 1,
+                      ease: 'easeInOut',
+                      delay: i * 0.2,
+                    }}                  
+                  >{item.text}</m.p>
                   <Link className='flex items-center pb-8' href="#">
                     <span className="font-bold mr-3 ">czytaj dalej</span> <PiArrowDownThin className="inline-block text-xl -rotate-[90deg]" />
                   </Link>
