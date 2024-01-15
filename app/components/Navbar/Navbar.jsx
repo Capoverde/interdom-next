@@ -103,7 +103,7 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
             >
               {navLinks.map((link, index) => (
                 <div className="overflow-hidden" key={index}>
-                  <NavLinks  title={link.title} href={link.href} />
+                  <NavLinks onClick={toggleMenu} title={link.title} href={link.href} />
                 </div>
               ))}
             </m.div>
