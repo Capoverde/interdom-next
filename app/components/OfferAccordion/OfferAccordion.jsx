@@ -33,7 +33,7 @@ export const OfferAccordion = () => {
       {AccordionData.map((data) => (
         <div
           key={data.id}
-          className={`accordionBox w-full border-r grid-border-clr cursor-pointer overflow-hidden ${
+          className={`accordionBox w-full border-r border-[#3e3e3e] cursor-pointer overflow-hidden ${
             hoveredItem === data.id ? 'hovered' : ''
           }`}
           onMouseEnter={() => handleMouseEnter(data.id)}
