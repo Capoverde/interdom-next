@@ -40,7 +40,7 @@ export const OfferAccordion = () => {
           onMouseLeave={handleMouseLeave}
         >
           <div className='content relative w-full h-full'>
-            <h3 className='offerTitle  xl:text-[3rem] font-bold text-gray-200 p-8'>
+            <h3 className='offerTitle md:text-[4rem]  xl:text-[3.5rem] font-bold text-gray-200 p-8'>
               {data.title}
             </h3>
             <m.h3
