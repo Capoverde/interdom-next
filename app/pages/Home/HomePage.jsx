@@ -124,12 +124,12 @@ export const HomePage = () => {
                   transition={{duration: 1, delay: 2}}               
          >Najmem</m.span>
         </h2>
-        <Image 
+        {/* <Image 
          src={"/HomeImage1.jpeg"}
          responsive={true}
          style={{objectFit: "cover"}}
          layout="fill"
-        />        
+        />         */}
       </m.div>                
     </div>
     <div className="col h-full grow">
@@ -175,12 +175,12 @@ export const HomePage = () => {
                 transition={{duration: 1, delay: 2.2}}             
          >Mieszkaniowe</m.span> 
         </h2>    
-        <Image 
-         src={"/HomeImage2.jpeg"}
+        {/* <Image 
+         src={"/HomeImage2.1.jpg"}
          responsive={true}
          style={{objectFit: "cover"}}
          layout="fill"
-        />            
+        />             */}
       </m.div>
     </div>
     <div className="col h-full w-[25.1%] border-l border-r mr-[5%] grid-border-clr">
@@ -226,12 +226,12 @@ export const HomePage = () => {
                 transition={{duration: 1, delay: 2.4}}             
          >Właściciele</m.span> 
         </h2>
-        <Image 
-         src={"/HomeImage3.jpg"}
-         responsive={true}
+        {/* <Image 
+         src={"/HomeImage3.2.jpg"}
+         responsive={true}s
          style={{objectFit: "cover"}}
         layout="fill"
-        />
+        /> */}
       </m.div>
     </div>
   </div>

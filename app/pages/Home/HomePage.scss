@@ -10,22 +10,23 @@
     //     background-image: url('../../public/img1.jpeg');
     // }
     overflow-x: hidden;
-    // background-repeat: no-repeat;
-    // background-size: contain;
-    // background-position: 0 0;
-    // background-attachment: fixed;
-    
-    // &-1{
-    //     background-image: url('../../../public/HomeImage1.jpeg');
-    // }
-    // &-2{
-    //     background-image: url('../../../public/HomeImage2.jpeg');
-    //     background-size: cover;
-    // }
-    // &-3{
-    //     background-image: url('../../../public/HomeImage3.jpg');
-    //     background-size: cover;
-    // }
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-attachment: fixed;
+    background-size: contain;
+
+    &-1{
+        background-image: url('../../../public/HomeImage1.jpeg');
+    }
+    &-2{
+        background-image: url('../../../public/HomeImage2.1.jpg');
+        background-size: cover;
+    }
+    &-3{
+        background-image: url('../../../public/HomeImage3.3.jpg');
+        background-size: cover;
+        background-position: -50% 0;
+    }
 
     &:before {
         position: absolute;
