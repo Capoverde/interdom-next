@@ -8,7 +8,6 @@ import  './HomePage.scss'
 
 export const HomePage = () => {
 
-
   const headerOne = {
     initial: {
       y: "30px",
