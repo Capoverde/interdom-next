@@ -13,8 +13,6 @@
 }
 
 .NavLinkSpanPolygon {
-    // -webkit-clip-path: polygon(0 0,0 0,0 100%,0 100%);
-    // clip-path: polygon(0 0,0 0,0 100%,0 100%);
     font-weight: 800;
     left:0;
     position: absolute;
@@ -22,7 +20,6 @@
  }
 
 .NavLinkSpan {
-    // width: 100%;
 
    &::before {
     content: "";
