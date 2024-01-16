@@ -3,5 +3,5 @@
  { "title": "O nas", "dataText":"O nas","href": "/" },
  { "title": "Oferta", "dataText":"Oferta", "href": "/" },
  { "title": "e-kartoteka","dataText":"e-kartoteka", "href": "/" },
- { "title": "Kontakt", "dataText":"Kontakt","href": "/ContactPage/Contact.jsx" }
+ { "title": "Kontakt", "dataText":"Kontakt","href": "ContactPage/ContactPage.jsx" }
 ]

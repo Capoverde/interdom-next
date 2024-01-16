@@ -25,8 +25,9 @@ export const About = () => {
 
   return (
     <AnimatePresence>
-      <ScoreBanner />
-      <div className='grid w-full h-full xl:mx-[5%] xl:border-l xl:border-r grid-border-clr'>
+      <div className="AboutPage-wrapper h-full w-full xl:px-[5%]">
+      {/* <ScoreBanner /> */}
+      <div className='w-full h-full xl:border-l xl:border-r grid-border-clr'>
         {aboutData.map((item, i) => (
           <div key={item.id}>
             {item.id % 2 !== 0 ? (
@@ -65,7 +66,7 @@ export const About = () => {
                 </div>
                 <div className='grid-item-right w-full flex-1 '>
                   <m.div
-                    className='image-box xl:mt-8 bg-gray-400 overflow-hidden'
+                    className='image-box xl:mt-8 overflow-hidden'
                     initial={{ opacity: 0, y: 20 }}
                     animate={controlsArray[i]}
                     transition={{
@@ -158,6 +159,7 @@ export const About = () => {
             )}
           </div>
         ))}
+      </div>
       </div>
     </AnimatePresence>
   );

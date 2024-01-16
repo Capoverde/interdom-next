@@ -5,12 +5,14 @@ import { About } from './pages/About/AboutPage'
 import { Offer } from './pages/Offer/Offer'
 import { ContactPage } from "./pages/ContactPage/ContactPage";
 import { Footer } from './components/Footer/Footer'
+import { ScoreBanner } from "./components/ScoreBanner/ScoreBanner";
 
 export default function Home() {
   return (
     <>
       <Header />
       <HomePage />
+      <ScoreBanner />
       <About />
       <Offer />
       <ContactPage />

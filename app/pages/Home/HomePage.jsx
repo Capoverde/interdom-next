@@ -52,7 +52,7 @@ export const HomePage = () => {
                 Zarządzanie Nieruchomościami
             </m.h2>
           </header>
-          <Link href="/About/AboutPage" passHref className=' w-full text-left relative overflow-hidden flex align-center'>
+          <Link href="/AboutPage" passHref className=' w-full text-left relative overflow-hidden flex align-center'>
              <m.span className='mr-2'
                                variants={{
                                 hidden: { 
