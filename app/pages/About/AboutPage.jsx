@@ -31,7 +31,7 @@ export const About = () => {
         {aboutData.map((item, i) => (
           <div key={item.id}>
             {item.id % 2 !== 0 ? (
-              <div className='xl:flex xs:flex-col xl:pb-8 w-full xl:border-b  grid-border-clr'>
+              <div className='xl:flex xs:flex-col xl:pb-8 w-full xl:border-b xl:border-r grid-border-clr'>
                 <div ref={refs[i].ref} className='grid-item-left flex-col self-center h-full flex-1 xl:px-6'>
                   <div className='overflow-hidden'>
                     <m.h2

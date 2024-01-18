@@ -1,7 +1,7 @@
 [
- { "title": "Home", "dataText":"Home", "href": "/pages/Home" },
- { "title": "O nas", "dataText":"O nas","href": "/pages/About" },
- { "title": "Oferta", "dataText":"Oferta", "href": "/pages/Offer" },
- { "title": "e-kartoteka","dataText":"e-kartoteka", "href": "#" },
- { "title": "Kontakt", "dataText":"Kontakt","href": "/pages/ContactPage" }
+ { "title": "Home", "dataText":"Home", "href": "/" },
+ { "title": "O nas", "dataText":"O nas","href": "/" },
+ { "title": "Oferta", "dataText":"Oferta", "href": "/" },
+ { "title": "e-kartoteka","dataText":"e-kartoteka", "href": "/" },
+ { "title": "Kontakt", "dataText":"Kontakt","href": "ContactPage/ContactPage.jsx" }
 ]

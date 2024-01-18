@@ -29,7 +29,7 @@ export const OfferAccordion = () => {
   };
 
   return (
-    <div className='accordion w-full xl:flex md:flex overflow-hidden'>
+    <div className='w-full xl:flex md:flex overflow-hidden'>
       {AccordionData.map((data) => (
         <div
           key={data.id}
