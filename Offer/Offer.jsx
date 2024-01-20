@@ -33,7 +33,7 @@ export const Offer = () => {
                                           }}        
         >Nasza Oferta</m.h2>
       </header>
-      <article className='OfferArticle'>
+      <article className='OfferArticle border-b grid-border-clr'>
         <m.p className='OfferParagraph'
                                        animate={controls}
                                        initial={{ opacity: 0, y: 10 }}

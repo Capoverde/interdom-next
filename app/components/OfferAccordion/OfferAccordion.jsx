@@ -30,7 +30,7 @@ export const OfferAccordion = () => {
   };
 
   return (
-    <div className='accordion w-full xl:flex md:flex overflow-hidden'>
+    <div className='accordion xl:pt-52 w-full xl:flex md:flex overflow-hidden'>
       {AccordionData.map((data) => (
         <div
           key={data.id}
@@ -41,7 +41,14 @@ export const OfferAccordion = () => {
           onMouseLeave={handleMouseLeave}
         >
           <div className='content relative w-full h-full'>
-          {/* <Blob className='accordionBlob'/> */}
+          {/* <Blob /> */}
+          <Blob className="AccordionBlob absolute" 
+                width="200px" 
+                height="150px" 
+                backgroundColor="bg-blue-500" 
+                top="5%" 
+                left="5%"
+          />
             <h3 className='offerTitle md:text-[4rem]  xl:text-[3.5rem] font-bold text-gray-200 p-8'>
               {data.title}
             </h3>
