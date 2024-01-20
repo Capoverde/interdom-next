@@ -50,7 +50,8 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
             animate="open"
             exit="initial"
           >
-            <Blob />
+            {/* <Blob /> */}
+            <Blob width="200px" height="150px" backgroundColor="bg-blue-500" top="30%" left="20%" />
             <div className="overflow-hidden" >
               <AddressTitle />
             </div>
@@ -93,7 +94,8 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
           </m.div>
           {/* ----------------- CENTER ------------------ */}
           <div className="relative h-full flex-1 flex-col border-r border-[#3e3e3e] px-8 xl:pt-20">
-            <Blob />
+            {/* <Blob /> */}
+            <Blob width="200px" height="150px" backgroundColor="bg-blue-500" top="25%" left="25%" />
             <m.div
               variants={containerVars}
               initial="initial"
@@ -110,7 +112,8 @@ export const Navbar = ({ toggleMenu, isOpen }) => {
           </div>
           {/* ---------------------- RIGHT ------------------------ */}
           <div className="navbar-right-box relative w-full h-full flex-1 text-gray-300">
-            <Blob />
+            {/* <Blob /> */}
+            <Blob width="200px" height="150px" backgroundColor="bg-blue-500" top="10%" left="20%" />
             <div className="overflow-hidden xl:pt-24 xl:px-11">
               <PhonesMailTitle />
             </div>

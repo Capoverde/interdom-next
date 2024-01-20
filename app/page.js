@@ -1,9 +1,9 @@
 "use client"
 import { Header } from "./components/Header/Header";
-import { HomePage } from "./pages/Home/HomePage";
-import { About } from './pages/About/AboutPage'
-import { Offer } from './pages/Offer/Offer'
-import { ContactPage } from "./pages/ContactPage/ContactPage";
+import { HomePage } from "../Home/HomePage";
+import { About } from '../About/AboutPage'
+import { Offer } from '../Offer/Offer'
+import { ContactPage } from "../ContactPage/ContactPage";
 import { Footer } from './components/Footer/Footer'
 import { ScoreBanner } from "./components/ScoreBanner/ScoreBanner";
 

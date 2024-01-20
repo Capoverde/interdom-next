@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion as m, useAnimation } from 'framer-motion';
+import { Blob } from '../Blob/Blob';
 import './OfferAccordion.scss';
 import AccordionData from './AccordionData.json';
 
@@ -29,17 +30,18 @@ export const OfferAccordion = () => {
   };
 
   return (
-    <div className='w-full xl:flex md:flex overflow-hidden'>
+    <div className='accordion w-full xl:flex md:flex overflow-hidden'>
       {AccordionData.map((data) => (
         <div
           key={data.id}
-          className={`accordionBox w-full border-r border-[#3e3e3e] cursor-pointer overflow-hidden ${
+          className={`accordionBox relative w-full border-r border-[#3e3e3e] cursor-pointer overflow-hidden ${
             hoveredItem === data.id ? 'hovered' : ''
           }`}
           onMouseEnter={() => handleMouseEnter(data.id)}
           onMouseLeave={handleMouseLeave}
         >
           <div className='content relative w-full h-full'>
+          {/* <Blob className='accordionBlob'/> */}
             <h3 className='offerTitle md:text-[4rem]  xl:text-[3.5rem] font-bold text-gray-200 p-8'>
               {data.title}
             </h3>
