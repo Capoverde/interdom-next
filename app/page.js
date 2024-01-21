@@ -17,8 +17,8 @@ export default function Home() {
       <ScoreBanner />
       <About />
       <Offer />
-      <ContactPage />
       <Map />
+      <ContactPage />
       <Footer />
     </>
   );

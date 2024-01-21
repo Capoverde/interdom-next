@@ -1,16 +1,24 @@
-// import { MapContainer } from 'react-leaflet/MapContainer'
-// import { TileLayer } from 'react-leaflet/TileLayer'
-// import { useMap } from 'react-leaflet'
-
 import { MapContainer, TileLayer, useMap } from 'react-leaflet'
+import './Map.scss'
+import 'leaflet/dist/leaflet.css'
 
-export const Map =() =>{
-  return(
-   <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
-     <TileLayer
-       attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+export const Map = () => {
+
+  const center =[51.774794949643535, 19.45659121081486]
+
+
+  return (
+    <div className="w-screen h-[40vh]">
+    <MapContainer className='leaflet-container' 
+                   id="map"
+     center={center}
+     zoom={35}
+    >
+     <TileLayer 
+       attribution="&copy <a href='https://www.openstreetmap.org/copyright'>OpenstreetMap</a>"
        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
      />
-   </MapContainer>
+    </MapContainer>
+    </div>
   )
 }
