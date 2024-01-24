@@ -23,7 +23,7 @@ export const Offer = () => {
   return (
     <div className="OfferPage-wrapper h-full w-full xl:px-[5%]">
     <div ref={ref} className='w-full h-auto border-r border-l grid-border-clr  mb-10'> 
-      <header className='w-full py-4 border-b grid-border-clr'>
+      <header className='w-full py-4 '>
         <m.h2 className='text-5xl xl:px-8 xl:py-6'
                                        animate={controls}
                                        initial={{ opacity: 0, y: 10 }}

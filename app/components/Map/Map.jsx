@@ -8,7 +8,7 @@ export const Map = () => {
 
 
   return (
-    <div className="w-screen h-[40vh]">
+    <div className="w-screen">
     <MapContainer className='leaflet-container' 
                    id="map"
      center={center}
