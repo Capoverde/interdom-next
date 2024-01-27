@@ -1,5 +1,5 @@
 "use client"
-import { Header } from "./components/Header/Header";
+// import { Header } from "./components/Header/Header";
 import { HomePage } from "../Home/HomePage";
 import { About } from '../About/AboutPage'
 import { Offer } from '../Offer/Offer'
@@ -12,7 +12,7 @@ import { Map } from "./components/Map/Map"
 export default function Home() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <HomePage />
       <ScoreBanner />
       <About />

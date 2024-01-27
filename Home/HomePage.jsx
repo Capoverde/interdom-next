@@ -4,6 +4,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { motion as m, AnimatePresence } from 'framer-motion';
 import { BsArrowUpRight } from "react-icons/bs";
+import { Header } from '@/app/components/Header/Header';
+import Stairs from '../app/components/Stairs'
 import  './HomePage.scss'
 
 export const HomePage = () => {
@@ -28,6 +30,8 @@ export const HomePage = () => {
 
   return (
     <AnimatePresence>
+      <Stairs>
+        <Header />
     <div className='w-full h-[101vh] flex'>
     <div className="col  h-full w-[25.1%] 
                     border-r border-l  xl:ml-[5%] grid-border-clr">
@@ -235,6 +239,7 @@ export const HomePage = () => {
       </m.div>
     </div>
   </div>
+  </Stairs>
   </AnimatePresence>
   )
 }

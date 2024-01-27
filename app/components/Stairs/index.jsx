@@ -1,6 +1,7 @@
 import React from 'react'
-import { motion } from 'framer-motion';
+import { motion as m } from 'framer-motion';
 import { opacity, expand } from './anim';
+import './Stairs.scss'
 
 export default function Layout({children, backgroundColor}) {
 
@@ -17,12 +18,12 @@ export default function Layout({children, backgroundColor}) {
     const nbOfColumns = 3
     return (
         <div className='page stairs' style={{backgroundColor}}>
-            <motion.div {...anim(opacity)} className='transition-background'/>
+            <m.div {...anim(opacity)} className='transition-background'/>
             <div className='transition-container'>
                 {
                     [...Array(nbOfColumns)].map( (_, i) => {
                         return (
-                            <motion.div key={i} {...anim(expand, nbOfColumns - i)}/>
+                            <m.div key={i} {...anim(expand, nbOfColumns - i)}/>
                         ) 
                     })
                 }
